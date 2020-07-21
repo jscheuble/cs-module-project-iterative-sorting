@@ -18,12 +18,23 @@ def selection_sort(arr):
     return arr
 
 
+nums = [100, 8, 5, 11, 1, 21, 41]
+
+print(selection_sort(nums))
+
+
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort(arr):
     # Your code here
-
+    for x in range(len(arr)):
+        for y in range(0, len(arr) - x - 1):
+            if arr[y] > arr[y + 1]:  # check if the value is greater than neighbor
+                # if true, reassign values
+                arr[y], arr[y + 1] = arr[y + 1], arr[y]
     return arr
 
+
+print(bubble_sort(nums))
 
 '''
 STRETCH: implement the Counting Sort function below
